@@ -9,7 +9,7 @@ public class Program
         Hewan hewan1= new Hewan("Sepi", 6);
         Singa singa = new Singa("Rana", 8, 4);
         Gajah gajah = new Gajah("Raksa", 7, 4);
-        Ular ular = new Ular("Lary", 3, 4.1d);
+        Ular ular = new Ular("Laru", 3, 4.1d);
         Buaya buaya = new Buaya("Kevin", 8, 3.3d);
 
         Console.WriteLine(gajah.Suara());
@@ -27,6 +27,10 @@ public class Program
 
         Reptil reptil = new Buaya("Yanto", 3, 5.4d);
         Console.WriteLine(reptil.Suara());
+        Console.WriteLine();
+
+        Console.WriteLine(hewan1.Suara());
+        Console.WriteLine(hewan1.InfoHewan());
         Console.WriteLine();
 
         kebunBinatang.TambahHewan(singa);
@@ -91,7 +95,7 @@ public class Singa : Mamalia
     }
     public override string Suara()
     {
-        return "Singa Mengeong";
+        return "Singa mengaum dengan keras.... Uaummmmmm aum";
     }
     public void Mengaum()
     {
@@ -123,7 +127,7 @@ public class Ular : Reptil
     }
     public void Merayap()
     {
-        Console.WriteLine("Ular sedang merayap di tanah");
+        Console.WriteLine("Ular sedang merayap-rayap di tanah");
     }
 }
 
@@ -135,7 +139,7 @@ public class Buaya : Reptil
     }
     public override string Suara()
     {
-        return "Aku cuma cinta kamu";
+        return "Kamu kalau butuh apa-apa, bilang ke aku ya";
     }
 }
 
@@ -146,12 +150,12 @@ public class KebunBinatang
     public void TambahHewan(Hewan hewan)
     {
         koleksiHewan.Add(hewan);
-        Console.WriteLine($"{hewan.Nama} berhasil ditambahkan ke Kebun Binatang.");
+        Console.WriteLine($"{hewan.Nama} berhasil masuk ke Kebun Binatang.");
     }
 
     public void DaftarHewan()
     {
-        Console.WriteLine("\nDaftar Hewan yang ada di Kebun Binatang:");
+        Console.WriteLine("\nDaftar Hewan yang Ada di Kebun Binatang:");
         foreach (var hewan in koleksiHewan)
         {
             Console.WriteLine(hewan.InfoHewan());
