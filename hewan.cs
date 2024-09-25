@@ -39,8 +39,20 @@ public class Program
         kebunBinatang.TambahHewan(buaya);
         Console.WriteLine();
         kebunBinatang.DaftarHewan();
+        
+        Console.WriteLine();
+        Console.WriteLine(singa.Suara());
+        Console.WriteLine(gajah.Suara());
+        Console.WriteLine(ular.Suara());
+        Console.WriteLine(buaya.Suara());
+        Console.WriteLine();
+
+        ular.Merayap();
+        singa.Mengaum();
+        Console.WriteLine();
     }
 }
+
 public class Hewan
 {
     public string Nama;
@@ -159,7 +171,6 @@ public class KebunBinatang
         foreach (var hewan in koleksiHewan)
         {
             Console.WriteLine(hewan.InfoHewan());
-            Console.WriteLine(hewan.Suara());
         }
     }
 }
